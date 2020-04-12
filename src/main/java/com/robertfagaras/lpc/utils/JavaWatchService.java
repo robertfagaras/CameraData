@@ -4,7 +4,6 @@ import com.robertfagaras.lpc.model.LP;
 import com.robertfagaras.lpc.repositories.LpRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.nio.file.FileSystems;
@@ -108,7 +107,7 @@ public class JavaWatchService {
             String number = photo.substring(photo.indexOf("_")+1,photo.indexOf("."));
             LP lp = new LP();
             lp.setDate(datetime);
-            lp.setNumber(number);
+            lp.setCarNumber(number);
             lpRepo.addLP(lp);
 
             List<LP> list = lpRepo.getLPs();

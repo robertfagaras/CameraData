@@ -13,7 +13,6 @@ import java.nio.file.Paths;
 @SpringBootApplication
 @EnableScheduling
 public class LpcApplication {
-
 	public static void main(String[] args) throws IOException {
 		SpringApplication.run(LpcApplication.class, args);
 	}
