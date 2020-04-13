@@ -20,7 +20,7 @@ public class LpRepo {
 
     public void addLP(LP lp){
         String sql = "INSERT INTO lp VALUES(NULL,?,?)";
-        jdbcTemplate2.update(sql,lp.getDate(),lp.getNumber());
+        jdbcTemplate2.update(sql,lp.getDate(),lp.getCarNumber());
     }
 
     public List<LP> getLPs(){
@@ -31,10 +31,12 @@ public class LpRepo {
                 LP lp = new LP();
                 lp.setId(resultSet.getInt("id"));
                 lp.setDate(resultSet.getString("date"));
-                lp.setNumber(resultSet.getString("number"));
+                lp.setCarNumber(resultSet.getString("number"));
                 return lp;
             }
         });
     }
+
+
 
 }

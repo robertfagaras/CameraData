@@ -4,14 +4,14 @@ public class LP {
 
     private int id;
     private String date;
-    private String number;
+    private String carNumber;
 
     @Override
     public String toString() {
         return "LP{" +
                 "id=" + id +
                 ", date='" + date + '\'' +
-                ", number='" + number + '\'' +
+                ", carNumber='" + carNumber + '\'' +
                 '}';
     }
 
@@ -31,12 +31,12 @@ public class LP {
         this.date = date;
     }
 
-    public String getNumber() {
-        return number;
+    public String getCarNumber() {
+        return carNumber;
     }
 
-    public void setNumber(String number) {
-        this.number = number;
+    public void setCarNumber(String carNumber) {
+        this.carNumber = carNumber;
     }
 }
 
